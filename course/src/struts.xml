@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- Add packages here -->
+	<constant name="struts.devMode" value="true" />
+	
+	<!-- 前台package -->
+	<package name="front" extends="struts-default" namespace="/">
+		
+		<!-- 默认页面为index.jsp -->
+		<default-action-ref name="index" />
+		<action name="index">
+			<result>/index.jsp</result>
+		</action>
+		
+		<!-- 登录用的Action -->
+		<action name="login" class="com.course.action.LoginAction">
+			<result name="login">/index.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+        <!-- 留言板 -->
+        <action name="guestbook" class="com.course.action.GuestbookAction">
+            <result name="success">/guestbook.jsp</result>
+            <result name="error">/error.jsp</result>
+            <result name="index">/index.jsp</result>
+        </action>
+
+	</package>
+
+	<!-- 后台的package:这里是用来处理学生修改密码，老师出试卷等功能
+	<package name="backend" extends="struts-default" namespace="/backend">
+		<action name="teacher" class="com.course.action.TeacherAction"></action>
+	</package>
+	-->
+</struts>
