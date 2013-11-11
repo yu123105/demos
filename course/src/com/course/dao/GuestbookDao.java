@@ -14,4 +14,5 @@ import java.util.List;
 public interface GuestbookDao {
     abstract List<Guestbook> getAllGuestbooks();
     abstract boolean add(Guestbook guestbook, int parentid, int userid);
+    abstract List<Guestbook> getGuestbooks(int pageNo, int PAGE_SIZE);
 }

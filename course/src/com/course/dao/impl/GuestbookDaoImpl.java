@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -41,15 +40,32 @@ public class GuestbookDaoImpl implements GuestbookDao {
     /*
      * methods-------------------------------
      */
+
+    /**
+     * 拿到所有记录
+     * @return List<Guestbook>
+     */
     @Override
     public List<Guestbook> getAllGuestbooks() {
-        List<Guestbook> list = new ArrayList<Guestbook>();
+        List<Guestbook> list;
     	/*
     	 * 这样写能否多棵树查询？经过测试这是可以的 测试程序见hibernate_2200_Tree
     	 * 值得注意的是HQL语句中得筛选出根节点
     	 * 一棵树查询是get(XXX.Class, id);
     	 */
-        list = getSession().createQuery("from Guestbook g where g.parent.id = null").list();
+        String sql = "from Guestbook g where g.parent.id = null " +
+                     "order by g.datetime desc";
+        list = getSession().createQuery(sql).list();
+        return list;
+    }
+    @Override
+    public List<Guestbook> getGuestbooks (int pageNo, int PAGE_SIZE) {
+        List<Guestbook> list;
+        int startPos = (pageNo - 1) * PAGE_SIZE;
+        String sql = "from Guestbook g where g.parent.id = null" +
+              " order by g.datetime desc ";
+        list = getSession().createQuery(sql).setFirstResult(startPos)
+                                            .setMaxResults(PAGE_SIZE).list();
         return list;
     }
 

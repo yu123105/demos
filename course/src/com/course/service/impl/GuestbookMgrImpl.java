@@ -40,7 +40,13 @@ public class GuestbookMgrImpl implements GuestbookMgr {
     }
 
     @Override
+    public List<Guestbook> getGuestbooks(int pageNo, int PAGE_SIZE){
+        return guestbookDao.getGuestbooks(pageNo, PAGE_SIZE);
+    }
+
+    @Override
     public boolean add(Guestbook guestbook, int parentid, int userid) {
         return guestbookDao.add(guestbook, parentid, userid);
     }
+
 }

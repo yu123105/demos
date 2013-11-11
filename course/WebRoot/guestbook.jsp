@@ -61,7 +61,7 @@
             <s:iterator value="#p['children']" var="ch">
                 <!-- 子循环开始 -->
             <div class="guestbook-reply">
-                    <p class="guestbook-head">
+                    <p class="guestbook-rhead">
                         <span class="guestbook-name">${ch.user.username}</span> <span
                             class="guestbook-time">${ch.datetime}</span></p>
 
@@ -87,7 +87,13 @@
         <br/>
         <br/>
     <%-- 页码 --%>
-        <div>页码</div>
+        <div>
+            当前是第${pageNo}页||
+            共${totalPage}页
+            <%--${pageNo-1}--%>
+            <a href="guestbook?pageNo=${pageNo-1}" >上一页</a>
+            <a href="guestbook?pageNo=${pageNo+1}" >下一页</a>
+        </div>
 
     </div>
     <%-- 发表主题 --%>

@@ -20,6 +20,12 @@ public class GuestbookAction extends ActionSupport {
     private Guestbook guestbook;
     private List<Guestbook> list;
     private GuestbookMgr gbm;
+    /*
+    分页处理
+     */
+    private int pageNo = 1;
+    private int PAGE_SIZE;
+    private int totalPage;
 
     public GuestbookMgr getGbm() {
         return gbm;
@@ -61,10 +67,41 @@ public class GuestbookAction extends ActionSupport {
         this.list = list;
     }
 
+    public int getPageNo() {
+        return pageNo;
+    }
+
+    public void setPageNo(int pageNo) {
+        this.pageNo = pageNo;
+    }
+
+    public int getPAGE_SIZE() {
+        return PAGE_SIZE;
+    }
+
+    public void setPAGE_SIZE(int PAGE_SIZE) {
+        this.PAGE_SIZE = PAGE_SIZE;
+    }
+
+    public int getTotalPage() {
+        return totalPage;
+    }
+
+    public void setTotalPage(int totalPage) {
+        this.totalPage = totalPage;
+    }
+
     @Override
     public String execute() throws Exception {
         System.out.println("execute");
-        list = gbm.getAllGuestbooks();
+        PAGE_SIZE = 5;
+        totalPage = (gbm.getAllGuestbooks().size() + PAGE_SIZE - 1) / PAGE_SIZE;
+        if (pageNo == 0) {
+            pageNo = 1;
+        } else if (pageNo > totalPage) {
+            pageNo = totalPage;
+        }
+        list = gbm.getGuestbooks(pageNo, PAGE_SIZE);
         return SUCCESS;
     }
 
