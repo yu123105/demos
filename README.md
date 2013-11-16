@@ -8,7 +8,7 @@ course：需要SSH和ExtJS框架。<br>
 其他项目都是测试Git版本控制或自己学习使用。<br>
 以上项目可能用到的jar包<br>
 <br>
-SSH_jars:<br>
+<a>SSH_jars:</a><br>
     antlr-2.7.7.jar<br>
     aopalliance-1.0.jar                                     #面向切面<br>
     aopalliance-alpha1.jar                                  #面向切面<br>
@@ -45,17 +45,17 @@ SSH_jars:<br>
     struts2-spring-plugin-2.3.14.jar<br>
     xwork-core-2.3.14.jar<br>
 <br>
-MYSQL_jar:<br>
+<a>MYSQL_jar:</a><br>
     mysql-connector-java-5.1.25-bin.jar<br>
 <br>
-JUnit_jar:<br>
+<a>JUnit_jar:</a><br>
     junit-4.11.jar<br>
     hamcrest-core-1.3.jar<br>
 <br>
-Gson_jar:                              #方便Object和Json对象相互转换（运用于前台响应）<br>
+<a>Gson_jar:</a>                              #方便Object和Json对象相互转换（运用于前台响应）<br>
     gson-2.2.4.jar<br>
 <br>
-JavaEE6.0_jar:                         #JavaEE6.0的jar包（在转移项目，重新编译Java类会用到）<br>
+<a>JavaEE6.0_jar:</a>                         #JavaEE6.0的jar包（在转移项目，重新编译Java类会用到）<br>
     javax.annotation.jar<br>
     javax.ejb.jar<br>
     javax.jms.jar<br>
