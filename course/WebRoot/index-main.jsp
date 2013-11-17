@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="GBK"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
  	<base href="<%=basePath%>">
     
-    <title>ʦ������</title>
+    <title>师资力量</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -131,16 +131,16 @@ parent.document.all("main").style.width=document.body.scrollWidth;
 			<div id="t1" >
 			  <div id="t1-1">
 					
-				   <a href="introduce.html"><img align="right"  src="images/more.gif"/></a> <strong>�γ̼��</strong>								
+				   <a href="introduce.html"><img align="right"  src="images/more.gif"/></a> <strong>课程简介</strong>								
 				   <br/>
 				   <br/><br/>
 				   <br/><br/>
 				   
-				 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;��רҵ�����߱����������á����ɼ����̹�������չ�����������֪ʶ����������Ϥ��չ�߻���Ӫ���������ͷ����ȫ����ʵ���������̣��߱���չ��֯������Ȼ������������н�ǿ������ͼ����������������������ҵ��λ����ز��Ŵ��»�չӪ������չ��չ����չ��Ŀ�����������������֯�������չλ��Ƶȸ�λ�Լ���ѧ�����з��湤���Ĺ��̹������չ��������߼�Ӧ����ר���˲š�
+				 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本专业培养具备管理、经济、法律及工商管理（会展管理）方面的知识和能力，熟悉会展策划、营销、管理和服务等全过程实务运作流程，具备会展组织与管理等基本能力，具有较强的外语和计算机运用能力，能在企、事业单位等相关部门从事会展营销、会展招展、会展项目开发与管理、会议组织与管理、展位设计等岗位以及教学、科研方面工作的工商管理类会展商务管理高级应用性专门人才。
 				  
 				   </div>
 				<div id="t1-2">
-				   <a href="videos.jsp"><img align="right"  src="images/more.gif"/></a> <strong>��ѧ��Ƶ</strong>
+				   <a href="videos.jsp"><img align="right"  src="images/more.gif"/></a> <strong>教学视频</strong>
 				   <br/>
 				   <br/>
 				 <video width="320" height="160" controls="controls" >
@@ -152,39 +152,39 @@ parent.document.all("main").style.width=document.body.scrollWidth;
 			</div>
 			<div  id="t2">
 				<div id="t2-1">
-				   <a href="teachers.jsp"><img align="right"  src="images/more.gif"/></a> <strong>ʦ������</strong>
+				   <a href="teachers.jsp"><img align="right"  src="images/more.gif"/></a> <strong>师资力量</strong>
 				   <br/>
 				   <br/>
 				   <img src="images/teacher1.png" style="height:130px; width:110px; float:left;">
-				   xxx������1968��...
+				   xxx出身于1968年...
 				</div>
 				<div id="t2-2">
-				   <a href=""><img align="right"  src="images/more.gif"/></a> <strong>�γ�֪ͨ</strong>
+				   <a href=""><img align="right"  src="images/more.gif"/></a> <strong>课程通知</strong>
 				   <br/>
 				   <br/>
-				  <span style=" float:right;"> 1990.06.01</span> <li style="text-overflow:ellipsis;overflow:hidden;text-align:left; width:240px;"><a href="#" title="�γ�֪ͨ1"> <nobr>�γ̳�֪ͨ��֪ͨ�γ�֪ͨ�γ�֪ͨ�γ�֪ͨ�γ̿γ�ͨ��ͨ�γ�ͨ��ͨ�γ�ͨ��֪֪ͨ</nobr></a></li>
+				  <span style=" float:right;"> 1990.06.01</span> <li style="text-overflow:ellipsis;overflow:hidden;text-align:left; width:240px;"><a href="#" title="课程通知1"> <nobr>课程程通知课通知课程通知课程通知课程通知课程课程通程通课程通程通课程通程通知知</nobr></a></li>
 				   <br/>
-				   ��չ�γ���һ��רҵ�ԺܸߵĿγ̡�<br/>
+				   会展课程是一门专业性很高的课程。<br/>
 				   <br/>
-				   ��չ�γ���һ��רҵ�ԺܸߵĿγ̡�<br/>
+				   会展课程是一门专业性很高的课程。<br/>
 				   <br/>
-				   ��չ�γ���һ��רҵ�ԺܸߵĿγ̡�<br/>
+				   会展课程是一门专业性很高的课程。<br/>
 				   <br/>
-				   ��չ�γ���һ��רҵ�ԺܸߵĿγ̡�
+				   会展课程是一门专业性很高的课程。
 				</div>
 			</div>
 			<div id="t3">
 			<div id="t3-1" style="height:150px; ">
-			 <a href="calendars.jsp"><img align="right"  src="images/more.gif"/></a> &nbsp;<strong style="margin-left:15px;">��ѧ����</strong>
+			 <a href="calendars.jsp"><img align="right"  src="images/more.gif"/></a> &nbsp;<strong style="margin-left:15px;">教学日历</strong>
 				   <br/>
 				   <br/>
-				   <span style=" float:right;"> 1990.06.01</span> <li style="text-overflow:ellipsis;overflow:hidden;text-align:left; width:150px;"><a href="#" title="�γ�֪ͨ1"> <nobr>�μ����ؿμ����ؿμ����ؿμ����ؿμ����ؿμ����ؿμ����ؿμ����ؿμ����ؿμ�����</nobr></a></li>
+				   <span style=" float:right;"> 1990.06.01</span> <li style="text-overflow:ellipsis;overflow:hidden;text-align:left; width:150px;"><a href="#" title="课程通知1"> <nobr>课件下载课件下载课件下载课件下载课件下载课件下载课件下载课件下载课件下载课件下载</nobr></a></li>
 			</div>
 				<div id="t3-2" style="height:390px;">
-				   <a href="coursewares.jsp"><img align="right"  src="images/more.gif"/></a> &nbsp;<strong style="margin-left:15px;">�μ�����</strong>
+				   <a href="coursewares.jsp"><img align="right"  src="images/more.gif"/></a> &nbsp;<strong style="margin-left:15px;">课件下载</strong>
 				   <br/>
 				   <br/>
-				   <span style=" float:right;"> 1990.06.01</span> <li style="text-overflow:ellipsis;overflow:hidden;text-align:left; width:150px;"><a href="#" title="�γ�֪ͨ1"> <nobr>�μ����ؿμ����ؿμ����ؿμ����ؿμ����ؿμ����ؿμ����ؿμ����ؿμ����ؿμ�����</nobr></a></li>
+				   <span style=" float:right;"> 1990.06.01</span> <li style="text-overflow:ellipsis;overflow:hidden;text-align:left; width:150px;"><a href="#" title="课程通知1"> <nobr>课件下载课件下载课件下载课件下载课件下载课件下载课件下载课件下载课件下载课件下载</nobr></a></li>
 				</div>
 				
 			</div>
