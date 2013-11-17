@@ -1,8 +1,8 @@
 package com.course.action;
 
 import java.util.Map;
-import com.course.model.User;
-import com.course.service.UserMgr;
+import com.course.model.Student;
+import com.course.service.StudentMgr;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -12,10 +12,10 @@ public class LoginAction extends ActionSupport {
  * 属性--------------------
  */
 	//model
-	private User user;
+	private Student student;
 	
 	//Service
-	private UserMgr userMgr;
+	private StudentMgr studentMgr;
 	
 /*
  * 方法代码
@@ -26,13 +26,13 @@ public class LoginAction extends ActionSupport {
 	 * @throws Exception 
 	 */
 	public String login() throws Exception{
-		if (userMgr.exists(user)) {
-			user = userMgr.LoadUserByName(user.getUsername());
-			System.out.println(user.getUsername()
-					+ " is already login, password is " + user.getPassword());
+		if (studentMgr.exists(student)) {
+			student = studentMgr.LoadUserByName(student.getUsername());
+			System.out.println(student.getUsername()
+					+ " is already login, password is " + student.getPassword());
 			//将用户压入ActionContext中的session栈中（以后Session都这么操作）
 			Map<String, Object> session = ActionContext.getContext().getSession();
-			session.put("user", user);
+			session.put("user", student);
 			return "login";
 		}
 		return "error";
@@ -42,21 +42,21 @@ public class LoginAction extends ActionSupport {
 /*
  * setters,getters--------------------
  */
-	public User getUser() {
-		return user;
+	public Student getStudentr() {
+		return student;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setStudent(Student student) {
+		this.student = student;
 	}
 	
-	public UserMgr getUserMgr() {
-		return userMgr;
+	public StudentMgr getStudentMgr() {
+		return studentMgr;
 	}
 
 
-	public void setUserMgr(UserMgr userMgr) {
-		this.userMgr = userMgr;
+	public void setStudentMgr(StudentMgr studentMgr) {
+		this.studentMgr = studentMgr;
 	}
 	
 }

@@ -1,15 +1,16 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="GBK"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<%@ taglib uri="/struts-tags" prefix="s" %>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'index.jsp' starting page</title>
+    <title>¾«Æ·¿Î³Ì</title>
+    
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -18,15 +19,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+
   </head>
   
   <body>
-    Great!
-    <!-- 
-    <s:property value="user.username" />
-    <s:property value="user.realname" />
-    <s:property value="user.password" />
-     -->
-    <a href="guestbook" >guestbook</a>
+  <jsp:include page="top.html"></jsp:include>
+  <iframe  id="main" src="index-main.jsp" width="100%" frameborder="0"name="main" height="0" scrolling="no"></iframe>
+  <jsp:include page="bottom.html"></jsp:include>
   </body>
 </html>
