@@ -47,7 +47,7 @@ create table tof(
   type int(11),                       #1:单选, 2：多选                   
   uid int references ruser(id),       #外键     
   primary key (id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for essayque 简答题
@@ -62,7 +62,7 @@ create table essayque(
   type int(11),                       #1:单选, 2：多选                   
   uid int references ruser(id),       #外键     
   primary key (id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for guestbook 留言

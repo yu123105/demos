@@ -1,6 +1,6 @@
 package com.course.dao;
 
-import com.course.model.User;
+import com.course.model.Student;
 
 public interface UserDao {
 	/**
@@ -8,12 +8,12 @@ public interface UserDao {
 	 * @param User
 	 * @return Boolean
 	 */
-	public boolean exists (User user);
+	public boolean exists (Student user);
 	
 	/**
 	 * 通过username来获取全部改用户信息
 	 * @param username
 	 * @return User
 	 */
-	public User LoadUserByName (String username);
+	public Student LoadUserByName (String username);
 }
