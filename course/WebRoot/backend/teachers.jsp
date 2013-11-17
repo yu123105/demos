@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="GBK"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
  	<base href="<%=basePath%>">
     
-    <title>╬╚ф╥йсф╣╫лЁл</title>
+    <title>Г╡╬Е⌠│Х╖├И╒▒Ф∙≥Г╗▀</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -31,10 +31,10 @@ img{ border:none;}
 
 <body style="width:980px; margin:0px auto; padding-top:10px;" >
 
-<div class="odd"> <span class="delete"><a href="#" title="и╬ЁЩ"><img src="images/delete.png" /></a></span><span class="edit"><a href="#" title="╠Ю╪╜"><img src="images/pen.png" /></a></span>╬╚ф╥╫лЁл</div>
-<div class="dob"> <span class="delete"><a href="#" title="и╬ЁЩ"><img src="images/delete.png" /></a></span><span class="edit"><a href="#" title="╠Ю╪╜"><img src="images/pen.png" /></a></span>╬╚ф╥╫лЁл</div>
+<div class="odd"> <span class="delete"><a href="#" title="Е┬═И≥╓"><img src="images/delete.png" /></a></span><span class="edit"><a href="#" title="Г╪√Х╬▒"><img src="images/pen.png" /></a></span>Г╡╬Е⌠│Ф∙≥Г╗▀</div>
+<div class="dob"> <span class="delete"><a href="#" title="Е┬═И≥╓"><img src="images/delete.png" /></a></span><span class="edit"><a href="#" title="Г╪√Х╬▒"><img src="images/pen.png" /></a></span>Г╡╬Е⌠│Ф∙≥Г╗▀</div>
 <div id="paging"style="text-align:center">
-<a href="#" >╣зр╩рЁ</a> &nbsp;&nbsp; <a href="#">иор╩рЁ</a> &nbsp;&nbsp;<a href="#" >обр╩рЁ</a> &nbsp;&nbsp;<a href="#" >вН╨Ср╩рЁ</a>&nbsp;&nbsp; ╧╡╪фё©рЁ
+<a href="#" >Г╛╛Д╦─И║╣</a> &nbsp;&nbsp; <a href="#">Д╦┼Д╦─И║╣</a> &nbsp;&nbsp;<a href="#" >Д╦▀Д╦─И║╣</a> &nbsp;&nbsp;<a href="#" >Ф°─Е░▌Д╦─И║╣</a>&nbsp;&nbsp; Е┘╠Х╝║О╪÷И║╣
 </div>
 <iframe id="iframeC" name="iframeC" src="" width="0" height="0" style="display:none;" ></iframe>
 
