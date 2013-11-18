@@ -23,7 +23,6 @@
 
 <body>
 <div class="container">
-    
 
     <div class="content">
         <h3 style="float: left;">留言板</h3>
@@ -58,7 +57,7 @@
 
             <div style="display: none;">
                 <!-- 回复表单 -->
-                <form action="guestbook!add" method="post" >
+                <form action="guestbook!add" method="post" target="_top" >
                     <input type="hidden" name="parentid" value="${p.id}"/>
                     <input type="hidden" name="userid" value="${session.user.id}"/>
                     <textarea rows="5" cols="80" name="guestbook.cont"></textarea>
@@ -85,7 +84,7 @@
     <div id="theme" style="display: none;">
         <span class="close" onClick="cancel();"></span>
 
-        <form action="guestbook!add" method="post">
+        <form action="guestbook!add" method="post" target="_top">
             <input type="hidden" name="parentid" value="0"/>
             <input type="hidden" name="userid" value="${session.user.id}"/>
             <span class="tip">请输入内容：</span>

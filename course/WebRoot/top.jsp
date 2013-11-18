@@ -26,8 +26,9 @@
 #outline {
 	margin: 0px auto;
 	width: 980px;
-	height: 100%;
+	margin-bottom: 5px;
 	background-image: url(images/guide.jpg);
+	background-repeat: repeat-x;
 	padding-top: 50px;
 	margin-top: -40px;
 	-moz-box-shadow: 3px 3px 4px #666666;
@@ -62,6 +63,7 @@
 	width: 980px;
 	height: 95px;
 	background-image: url(images/top.png);
+	background-repeat: no-repeat;
 	padding-top: 70px;
 	margin-top: -10px;
 }
@@ -108,7 +110,7 @@
 <body>
 	<div id="top">
 		<div id="login">
-			<a href="login.html" target="main">用户登录</a>
+			<a href="login.jsp" target="main">用户登录</a>
 		</div>
 		<div id="logo">
 			<img src="images/logo.png" />
@@ -120,7 +122,7 @@
 	</div>
 	<div id="outline">
 		<div id="guide">
-			<a href="main.jsp" target="main">首页</a> &nbsp;&nbsp;&nbsp;
+			<a href="index.jsp" >首页</a> &nbsp;&nbsp;&nbsp;
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <a
 				href="main.jsp" target="main">课程介绍</a>&nbsp;&nbsp;&nbsp;
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <a
@@ -130,7 +132,7 @@
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <a
 				href="main.jsp" target="main">教学视频</a>&nbsp;&nbsp;&nbsp;
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <a
-				href="main.jsp" target="main">留言板</a>
+				href="guestbook" target="main">留言板</a>
 		</div>
 	</div>
 	

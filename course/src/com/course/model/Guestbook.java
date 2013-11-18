@@ -1,6 +1,7 @@
 package com.course.model;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -16,14 +17,9 @@ import java.util.List;
 public class Guestbook {
     private int id;//留言ID
     private String cont;//留言内容
-    private Date datetime;//留言时间
-    private Student student;//学生留言者
-    private Teacher teacher;//老师
-    @Override
-	public String toString() {
-		return "Guestbook [student=" + student + ", teacher=" + teacher + "]";
-	}
-	private Guestbook parent;//父留言
+    private Timestamp datetime;//留言时间
+    private User user;//留言者
+    private Guestbook parent;//父留言
     private List<Guestbook> children = new ArrayList<Guestbook>();//子留言
 
     @Id
@@ -43,25 +39,16 @@ public class Guestbook {
     public Date getDatetime() {
         return datetime;
     }
-    public void setDatetime(Date datetime) {
+    public void setDatetime(Timestamp datetime) {
         this.datetime = datetime;
     }
-
     @ManyToOne
-    @JoinColumn(name="t_id")
-    public Teacher getTeacher() {
-		return teacher;
-	}
-	public void setTeacher(Teacher teacher) {
-		this.teacher = teacher;
-	}
-	@ManyToOne
-    @JoinColumn(name="s_id")
-    public Student getStudent() {
-        return student;
+    @JoinColumn(name="u_id")
+    public User getUser() {
+        return user;
     }
-    public void setUser(Student student) {
-        this.student = student;
+    public void setUser(User user) {
+        this.user = user;
     }
     @ManyToOne
     @JoinColumn(name="parent_id")

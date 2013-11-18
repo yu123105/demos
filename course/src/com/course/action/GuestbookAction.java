@@ -27,69 +27,9 @@ public class GuestbookAction extends ActionSupport {
     private int PAGE_SIZE;
     private int totalPage;
 
-    public GuestbookMgr getGbm() {
-        return gbm;
-    }
-
-    public void setGbm(GuestbookMgr gbm) {
-        this.gbm = gbm;
-    }
-
-    public int getParentid() {
-        return parentid;
-    }
-
-    public void setParentid(int parentid) {
-        this.parentid = parentid;
-    }
-
-    public int getUserid() {
-        return userid;
-    }
-
-    public void setUserid(int userid) {
-        this.userid = userid;
-    }
-
-    public Guestbook getGuestbook() {
-        return guestbook;
-    }
-
-    public void setGuestbook(Guestbook guestbook) {
-        this.guestbook = guestbook;
-    }
-
-    public List<Guestbook> getList() {
-        return list;
-    }
-
-    public void setList(List<Guestbook> list) {
-        this.list = list;
-    }
-
-    public int getPageNo() {
-        return pageNo;
-    }
-
-    public void setPageNo(int pageNo) {
-        this.pageNo = pageNo;
-    }
-
-    public int getPAGE_SIZE() {
-        return PAGE_SIZE;
-    }
-
-    public void setPAGE_SIZE(int PAGE_SIZE) {
-        this.PAGE_SIZE = PAGE_SIZE;
-    }
-
-    public int getTotalPage() {
-        return totalPage;
-    }
-
-    public void setTotalPage(int totalPage) {
-        this.totalPage = totalPage;
-    }
+    /*
+     * methods
+     */
 
     @Override
     public String execute() throws Exception {
@@ -115,5 +55,73 @@ public class GuestbookAction extends ActionSupport {
             return ERROR;
         }
         return "index";
+    }
+    
+    /*
+     * setters getters
+     */
+    
+    public GuestbookMgr getGbm() {
+    	return gbm;
+    }
+    
+    public void setGbm(GuestbookMgr gbm) {
+    	this.gbm = gbm;
+    }
+    
+    public int getParentid() {
+    	return parentid;
+    }
+    
+    public void setParentid(int parentid) {
+    	this.parentid = parentid;
+    }
+    
+    public int getUserid() {
+    	return userid;
+    }
+    
+    public void setUserid(int userid) {
+    	this.userid = userid;
+    }
+    
+    public Guestbook getGuestbook() {
+    	return guestbook;
+    }
+    
+    public void setGuestbook(Guestbook guestbook) {
+    	this.guestbook = guestbook;
+    }
+    
+    public List<Guestbook> getList() {
+    	return list;
+    }
+    
+    public void setList(List<Guestbook> list) {
+    	this.list = list;
+    }
+    
+    public int getPageNo() {
+    	return pageNo;
+    }
+    
+    public void setPageNo(int pageNo) {
+    	this.pageNo = pageNo;
+    }
+    
+    public int getPAGE_SIZE() {
+    	return PAGE_SIZE;
+    }
+    
+    public void setPAGE_SIZE(int PAGE_SIZE) {
+    	this.PAGE_SIZE = PAGE_SIZE;
+    }
+    
+    public int getTotalPage() {
+    	return totalPage;
+    }
+    
+    public void setTotalPage(int totalPage) {
+    	this.totalPage = totalPage;
     }
 }

@@ -1,16 +1,15 @@
 package com.course.dao.impl;
 
-import javax.annotation.Resource;
-
+import com.course.dao.UserDao;
+import com.course.model.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Component;
 
-import com.course.dao.UserDao;
-import com.course.model.Student;
+import javax.annotation.Resource;
 
 @Component("userDao")
-public class StudentDaoImpl implements UserDao {
+public class UserDaoImpl implements UserDao {
 
 /*
  * attributes----------------------------
@@ -34,10 +33,10 @@ public class StudentDaoImpl implements UserDao {
     }
 	
 	@Override
-	public boolean exists(Student student) {
-		Student u = (Student) getSession().createQuery(
-				"from User u where u.username = '" + student.getUsername()
-						+ "' and u.password = '" + student.getPassword() + "'")
+	public boolean exists(User user) {
+		User u = (User) getSession().createQuery(
+				"from User u where u.username = '" + user.getUsername()
+						+ "' and u.password = '" + user.getPassword() + "'")
 				.uniqueResult();
 		if (u != null) {
 			return true;
@@ -46,8 +45,8 @@ public class StudentDaoImpl implements UserDao {
 	}
 
 	@Override
-	public Student LoadUserByName(String username) {
-		Student user = (Student) getSession().createQuery(
+	public User LoadUserByName(String username) {
+		User user = (User) getSession().createQuery(
 				"from User u where u.username = '" + username + "'")
 				.uniqueResult();
 		return user;

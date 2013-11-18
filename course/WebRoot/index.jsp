@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <base href="<%=basePath%>">
     
     <title>精品课程</title>
-    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -23,8 +23,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  <jsp:include page="top.html"></jsp:include>
-  <iframe  id="main" src="index-main.jsp" width="100%" frameborder="0"name="main" height="0" scrolling="no"></iframe>
-  <jsp:include page="bottom.html"></jsp:include>
+  <jsp:include page="top.jsp"></jsp:include>
+  <iframe  id="main" src="index-main.jsp" width="100%" frameborder="0" name="main" height="0" scrolling="no"></iframe>
+  <jsp:include page="bottom.jsp"></jsp:include>
   </body>
 </html>
