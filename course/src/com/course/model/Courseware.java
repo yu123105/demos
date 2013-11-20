@@ -1,5 +1,7 @@
 package com.course.model;
 
+import java.sql.Timestamp;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -9,6 +11,7 @@ public class Courseware {
 	private int id;
 	private String cwname;
 	private String path;
+	private Timestamp datetime;
 	@Id
 	@GeneratedValue
 	public int getId() {
@@ -28,5 +31,11 @@ public class Courseware {
 	}
 	public void setPath(String path) {
 		this.path = path;
+	}
+	public Timestamp getDatetime() {
+		return datetime;
+	}
+	public void setDatetime(Timestamp datetime) {
+		this.datetime = datetime;
 	}
 }

@@ -31,9 +31,57 @@
 
 	</package>
 
-	<!-- 后台的package:这里是用来处理学生修改密码，老师出试卷等功能
 	<package name="backend" extends="struts-default" namespace="/backend">
-		<action name="teacher" class="com.course.action.TeacherAction"></action>
+		<!-- 学生管理 -->
+		<action name="stu" class="com.course.action.StuAction" >
+			<result name="success" >/success.jsp</result>
+			<result name="error" >/error.jsp</result>
+			<result name="stuview" >/backend/students.jsp</result>
+		</action>
+		<!-- 课件管理 -->
+		<action name="cou" class="com.course.action.CouAction">
+			<interceptor-ref name="basicStack"></interceptor-ref>
+	        <interceptor-ref name="fileUpload">
+	        	<param name="maximumSize">200000</param>
+	        </interceptor-ref>
+	        <interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="success" >/success.jsp</result>
+			<result name="error" >/error.jsp</result>
+			<result name="couview" >/backend/coursewares.jsp</result>
+		</action>
+		<!-- 教学日历管理 -->
+		<action name="cal" class="com.course.action.CalAction" >
+			<interceptor-ref name="basicStack"></interceptor-ref>
+	        <interceptor-ref name="fileUpload">
+	        	<param name="maximumSize">200000</param>
+	        </interceptor-ref>
+	        <interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="success" >/success.jsp</result>
+			<result name="error" >/error.jsp</result>
+			<result name="calview" >/backend/calenders.jsp</result>
+		</action>
+		<!-- 教学视频管理 -->
+		<action name="vid" class="com.course.action.VidAction" >
+			<interceptor-ref name="basicStack"></interceptor-ref>
+	        <interceptor-ref name="fileUpload">
+	        	<param name="maximumSize">200000</param>
+	        </interceptor-ref>
+	        <interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="success" >/success.jsp</result>
+			<result name="error" >/error.jsp</result>
+			<result name="vidview" >/backend/videos.jsp</result>
+		</action>
+		<!-- 教师管理 -->
+		<action name="tea" class="com.course.action.TeaAction" >
+			<result name="success" >/success.jsp</result>
+			<result name="error" >/error.jsp</result>
+			<result name="teaview" >/backend/teachers.jsp</result>
+		</action>
+		<!-- 题库管理 -->
+		<action name="que" class="com.course.action.QueAction">
+			<result name="success" >/success.jsp</result>
+			<result name="error" >/error.jsp</result>
+			<result name="queview" >/backend/error.jsp</result>
+		</action>
 	</package>
-	-->
 </struts>

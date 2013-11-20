@@ -3,6 +3,7 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -30,12 +31,25 @@ img{ border:none;}
 
 <body style="width:980px; margin:0px auto; padding-top:10px;" >
 
-<div class="odd"><span class="download"><a href="#" title="删除"><img src="images/delete.png" /></a></span> 精品教程1</div>
-<div class="dob"><span class="download"><a href="#" title="删除"><img src="images/delete.png" /></a></span> 精品教程2</div>
-<div id="paging"style="text-align:center">
-<a href="#" >第一页</a> &nbsp;&nbsp; <a href="#">上一页</a> &nbsp;&nbsp;<a href="#" >下一页</a> &nbsp;&nbsp;<a href="#" >最后一页</a>&nbsp;&nbsp; 共计？页
-</div>
-<iframe id="iframeC" name="iframeC" src="" width="0" height="0" style="display:none;" ></iframe>
+<table>
+	<tr>
+		<th>文件名</th>
+		<th>上传日期</th>
+		<th>path</th>
+	</tr>
+	<s:iterator value="vids" var="v" >
+	<tr>
+		<td>${v.vname}</td>
+		<td>${v.datetime}</td>
+		<td>${v.path}</td>
+	</tr>
+	</s:iterator>
+</table>
+
+	<a href="backend/vid!view?pageNo=1">第一页</a> &nbsp;&nbsp;
+	<a href="backend/vid!view?pageNo=${pageNo-1}">上一页</a> &nbsp;&nbsp;
+	<a href="backend/vid!view?pageNo=${pageNo+1}" >下一页</a> &nbsp;&nbsp;
+	<a href="backend/vid!view?pageNo=${totalPage}">最后一页</a>&nbsp;&nbsp; 共计 ${totalPage} 页
 
 <script type="text/javascript"> 
 function sethash(){

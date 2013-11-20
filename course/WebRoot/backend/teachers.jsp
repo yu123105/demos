@@ -3,10 +3,11 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
  	<base href="<%=basePath%>">
     
     <title>精品视频教程</title>
@@ -30,13 +31,40 @@ img{ border:none;}
 </head>
 
 <body style="width:980px; margin:0px auto; padding-top:10px;" >
-
+<!-- 
 <div class="odd"> <span class="delete"><a href="#" title="删除"><img src="images/delete.png" /></a></span><span class="edit"><a href="#" title="编辑"><img src="images/pen.png" /></a></span>精品教程</div>
 <div class="dob"> <span class="delete"><a href="#" title="删除"><img src="images/delete.png" /></a></span><span class="edit"><a href="#" title="编辑"><img src="images/pen.png" /></a></span>精品教程</div>
 <div id="paging"style="text-align:center">
 <a href="#" >第一页</a> &nbsp;&nbsp; <a href="#">上一页</a> &nbsp;&nbsp;<a href="#" >下一页</a> &nbsp;&nbsp;<a href="#" >最后一页</a>&nbsp;&nbsp; 共计？页
 </div>
 <iframe id="iframeC" name="iframeC" src="" width="0" height="0" style="display:none;" ></iframe>
+ -->
+ 
+<table>
+	<tr>
+		<th>ID</th>
+		<th>老师姓名</th>
+		<th>电话</th>
+		<th>昵称</th>
+		<th>职称</th>
+	</tr>
+<s:iterator value="teas" var="t" >
+	<tr>
+		<td>${t.id}</td>
+		<td>${t.realname}</td>
+		<td>${t.phone}</td>
+		<td>${t.username}</td>
+		<td>${t.position}</td>
+	</tr>
+</s:iterator>
+</table>
+
+	<a href="backend/tea!view?pageNo=1">第一页</a> &nbsp;&nbsp;
+	<a href="backend/tea!view?pageNo=${pageNo-1}">上一页</a> &nbsp;&nbsp;
+	<a href="backend/tea!view?pageNo=${pageNo+1}">下一页</a> &nbsp;&nbsp;
+	<a href="backend/tea!view?pageNo=${totalPage}">最后一页</a>&nbsp;&nbsp; 共计 ${totalPage} 页
+
+<s:debug></s:debug>
 
 <script type="text/javascript"> 
 function sethash(){

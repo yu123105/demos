@@ -24,14 +24,6 @@ public class GuestbookMgrImpl implements GuestbookMgr {
     private GuestbookDao guestbookDao;
 
     /*
-     * service层属性只需要setters即可,因为Spring注入就需要setters加@Resource注解
-     */
-    @Resource
-    public void setGuestbookDao(GuestbookDao guestbookDao) {
-        this.guestbookDao = guestbookDao;
-    }
-
-    /*
      * 方法--------------
      */
     @Override
@@ -47,6 +39,14 @@ public class GuestbookMgrImpl implements GuestbookMgr {
     @Override
     public boolean add(Guestbook guestbook, int parentid, int userid) {
         return guestbookDao.add(guestbook, parentid, userid);
+    }
+    
+    /*
+     * service层属性只需要setters即可,因为Spring注入就需要setters加@Resource注解
+     */
+    @Resource
+    public void setGuestbookDao(GuestbookDao guestbookDao) {
+        this.guestbookDao = guestbookDao;
     }
 
 }

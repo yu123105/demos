@@ -9,7 +9,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
 <base href="<%=basePath%>">
 
 <title>精品视频教程</title>
@@ -23,7 +23,12 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
 <style type="text/css">
-.download {
+.delete {
+	float: right;
+	margin-right: 30px;
+}
+
+.edit {
 	float: right;
 	margin-right: 30px;
 }
@@ -56,28 +61,41 @@ img {
 </head>
 
 <body style="width:980px; margin:0px auto; padding-top:10px;">
-
+	<!-- 
+<div class="odd"> <span class="delete"><a href="#" title="删除"><img src="images/delete.png" /></a></span><span class="edit"><a href="#" title="编辑"><img src="images/pen.png" /></a></span>精品教程</div>
+<div class="dob"> <span class="delete"><a href="#" title="删除"><img src="images/delete.png" /></a></span><span class="edit"><a href="#" title="编辑"><img src="images/pen.png" /></a></span>精品教程</div>
+<div id="paging"style="text-align:center">
+<a href="#" >第一页</a> &nbsp;&nbsp; <a href="#">上一页</a> &nbsp;&nbsp;<a href="#" >下一页</a> &nbsp;&nbsp;<a href="#" >最后一页</a>&nbsp;&nbsp; 共计？页
+</div>
+<iframe id="iframeC" name="iframeC" src="" width="0" height="0" style="display:none;" ></iframe>
+ -->
 	<table>
 		<tr>
-			<th>文件名</th>
-			<th>上传日期</th>
-			<th>path</th>
+			<th>ID</th>
+			<th>学生姓名</th>
+			<th>电话</th>
+			<th>昵称</th>
+			<th>班级</th>
+			<th>操作</th>
 		</tr>
-		<s:iterator value="cals" var="c">
+		<s:iterator value="stus" var="s">
 			<tr>
-				<td>${c.cname}</td>
-				<td>${c.datetime}</td>
-				<td>${c.path}</td>
+				<td>${s.id}</td>
+				<td>${s.realname}</td>
+				<td>${s.phone}</td>
+				<td>${s.username}</td>
+				<td>${s.clazz}</td>
+				<td><a href="stu!delete?id=${s.id}" title="删除"><img src="images/delete.png" /></a></td>
 			</tr>
 		</s:iterator>
 	</table>
 
-	<a href="backend/cal!view?pageNo=1">第一页</a> &nbsp;&nbsp;
-	<a href="backend/cal!view?pageNo=${pageNo-1}">上一页</a> &nbsp;&nbsp;
-	<a href="backend/cal!view?pageNo=${pageNo+1}">下一页</a> &nbsp;&nbsp;
-	<a href="backend/cal!view?pageNo=${totalPage}">最后一页</a>&nbsp;&nbsp; 共计
-	${totalPage} 页
-
+	<a href="backend/stu!view?pageNo=1">第一页</a> &nbsp;&nbsp;
+	<a href="backend/stu!view?pageNo=${pageNo-1}">上一页</a> &nbsp;&nbsp;
+	<a href="backend/stu!view?pageNo=${pageNo+1}" >下一页</a> &nbsp;&nbsp;
+	<a href="backend/stu!view?pageNo=${totalPage}">最后一页</a>&nbsp;&nbsp; 共计 ${totalPage} 页
+	
+	<s:debug></s:debug>
 	<script type="text/javascript">
 		function sethash() {
 			hashH = Math.min(document.documentElement.scrollHeight,

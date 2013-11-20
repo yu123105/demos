@@ -19,6 +19,7 @@ public class User {
 	private String username;//登录名
 	private String password;//登录密码
 	private String realname;//真实姓名
+	private String phone;//电话
 	
 	@Id
 	@GeneratedValue
@@ -45,5 +46,11 @@ public class User {
 	}
 	public void setRealname(String realname) {
 		this.realname = realname;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 }
